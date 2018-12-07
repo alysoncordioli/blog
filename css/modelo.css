@@ -1,18 +1,29 @@
 body{
-	margin: 0px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-image: url('../imagens/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	
 }
+/*Menu de navegação*/
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-	width: 100%
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 li {
     float: left;
-	width: 20%;
+	width: 25%;
 }
 
 li a {
@@ -21,19 +32,80 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	font-size: 1.2em;
 }
 
-/* Change the link color to #111 (black) on hover */
+
+/* Muda a cor do link #111 (preto) com hover */
 li a:hover {
     background-color: #111;
 }
+/*fim do menu de navegação*/
+/*Conteudo*/
+h1, h2, h3{
+	margin-top: 60px;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+}
+p{
+	text-align: center;
+	padding: 0px 10px 0px 10px;
+	font-size: 1.2rem;
+	color: white;
+}
+.cit{
+	text-align: center;
+}
+.gods{
+	margin: 0 46% 0 45%;
+	width: 16vw;
+	height: 40vh;
+}
+
+
+/*Album com flexbox*/
+header{
+	margin: .5vw;
+	font-size: 0;
+	display: -ms-flexbox;
+	-ms-flexbox-wrap: wrap;
+	-ms-flexbox-direction: column;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	display: -webkit-box;
+	display: flex;
+}
+header div{
+	-webkit-box-flex: auto;
+	-ms-flex: auto;
+	flex: auto;
+	width: 200px;
+	margin: .5vw;
+}
+header div img{
+	
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width 320px){
+	header div{
+		margin: 0;
+	}
+	header{
+		padding: 0;
+	}
+}
+/*final do album responsivo utilizando flexbox*/
 
 /* Footer */
 footer {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     color: #fff;
     margin-top: 20px;
     clear: both;
     background-color: #000;
+	font-size: 1.5em;
 }	
+
